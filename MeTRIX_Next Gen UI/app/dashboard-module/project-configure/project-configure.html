@@ -1,0 +1,191 @@
+<div id="project-configure" class="margin-width5">
+    <div class="row bottom-margin2">
+        <div class="col-sm-12">
+            <h3 class="header-text">Configure New Project</h3>
+        </div>
+    </div>
+    <hr>
+    <div id="project-configure-form">
+        <div class="row configure-project-row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Select Project*</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" data-toggle="dropdown">
+                            <span class="pull-left" *ngIf="selectedProject">{{selectedProject.projectName}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100 dropdown-list-menu">
+                                <li *ngFor="let projName of selectProjectData">
+                                    <a (click)="selectedProject = projName">{{projName.projectName}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Display Name*</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="selectedDisplayName">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row configure-project-row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Start Date*</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" [(ngModel)]="startDate">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>End Date</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" [(ngModel)]="endDate">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row configure-project-row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Project Category*</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" id="menu1" data-toggle="dropdown">
+                            <span class="pull-left">{{selectedProjectCategory}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100">
+                                <li *ngFor="let projCategory of projectCategory">
+                                    <a (click)="selectedProjectCategory = projCategory">{{projCategory}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Project Methodology*</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" id="menu1" data-toggle="dropdown">
+                            <span class="pull-left">{{selectedProjectMethodlogy}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100">
+                                <li *ngFor="let projMethodlogy of projectMethodlogy">
+                                    <a (click)="selectedProjectMethodlogy = projMethodlogy">{{projMethodlogy}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row configure-project-row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Project Domain</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="projectDomain">    
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Service Line</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" data-toggle="dropdown">
+                            <span class="pull-left">{{selectedServiceLine}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100">
+                                <li *ngFor="let servLine of serviceLine">
+                                    <a (click)="selectedServiceLine = servLine">{{servLine}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row configure-project-row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Engagement Model</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" id="menu1" data-toggle="dropdown">
+                            <span class="pull-left">{{selectedEngagementModel}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100">
+                                <li *ngFor="let engageModel of engagementModel">
+                                    <a (click)="selectedEngagementModel = engageModel">{{engageModel}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Pricing Model</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle width100 alignRight" type="button" id="menu1" data-toggle="dropdown">
+                            <span class="pull-left">{{selectedPricingModel}}</span>
+                            <span class="caret"></span></button>
+                            <ul class="dropdown-menu min-width-100">
+                                <li *ngFor="let priceModel of pricingModel">
+                                    <a (click)="selectedPricingModel = priceModel">{{priceModel}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="row marginTop4 marginBottom4">
+        <div class="col-sm-6">            
+            <button type="button" class="btn btn-default cancelBtn pull-right">Cancel</button>
+        </div>
+        <div class="col-sm-6">
+            <button type="button" class="btn btn-primary savebtn" (click)="addProjectData()">Save</button>
+        </div>
+    </div>
+</div>
+
+
+    <!--<ng-select [allowClear]="true"
+              [items]="selectProjectData"
+              [disabled]="disabled"
+              
+              placeholder="No city selected">
+    </ng-select>-->
+    

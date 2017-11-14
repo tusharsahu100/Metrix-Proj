@@ -1,0 +1,39 @@
+﻿<nav id="navbar" class="navbar navbar-inverse margin-bottom10">
+    <div class="container-fluid">
+        <!--<div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#toggleNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>-->
+        <div class="collapse navbar-collapse padding0" id="toggleNavbar">
+            <ul id="navMenuList" class="nav navbar-nav">
+                <li>
+                    <a (click)="selectedNav = 'Dashboard'" [routerLink]="['/dashboard']" draggable="false" [ngClass]="{'selectedNav' : selectedNav === 'Dashboard'}">
+                        {{'SHARED.NAVIGATION.dashboardMenu' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a (click)="selectedNav = 'Configure New Project'" [routerLink]="['/projectConfigure']" draggable="false" [ngClass]="{'selectedNav' : selectedNav === 'Configure New Project'}">
+                        {{'SHARED.NAVIGATION.configureProjectMenu' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a (click)="selectedNav = 'Risk Management'" [routerLink]="['/order']" draggable="false" [ngClass]="{'selectedNav' : selectedNav === 'Risk Management'}">
+                        {{'SHARED.NAVIGATION.riskManagementMenu' | translate }}
+                    </a>
+                </li>
+                <!--<li>
+                    <a [routerLink]="['/invoice']" draggable="false">{{'SHARED.NAVIGATION.invoiceMenu' | translate }}</a>
+                </li>-->
+            </ul>
+            <div id="log-out" class="pull-right" (click)="logout();">
+                <label>Logout</label>
+            </div>
+            <div id="log-out" class="pull-right">
+                <label>Hi {{userObj.full_name}}</label>
+            </div>
+         </div>
+    </div>
+</nav>

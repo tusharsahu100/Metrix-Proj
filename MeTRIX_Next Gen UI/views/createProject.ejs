@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <title>Add Project </title>
+
+  <link rel="stylesheet" type="text/css" href="public/css/login.css">
+
+</head>
+
+<body>
+  <center>
+    <form action="/createProject" class="form-horizontal" method="post">
+      <div class="form-group">
+        <br/><br/> <br/><br/> <br/><br/>
+        <label for="project_name">Project Name</label>
+        <div class="col-sm-9">
+          <input class="form-control input-sm" name="project_name" id="project_name" type="text">
+        </div>
+      </div>
+      <br/>
+      <div class="form-group">
+        <br/><br/>
+        <label for="project_category">Project Category</label>
+        <div class="col-sm-9">
+          <input class="form-control" name="project_category" id="project_category" type="text">
+          <div class="col-sm-9">
+          </div>
+          <br/>
+          <div class="form-group">
+            <br/><br/>
+            <label for="project_methodology">Project Methodology</label>
+            <div class="col-sm-9">
+              <input class="form-control input-lg" name="project_methodology" id="project_methodology" type="text">
+              <div class="col-sm-9">
+              </div>
+              <div class="form-group">
+                <div class="col-sm-9 col-sm-offset-3">
+                  <br/><br/>
+                  <button type="submit" class="btn btn-default">Save</button>
+                </div>
+              </div>
+
+
+              <p>Please Enter no of resources</p>
+              <input type="number" min="1" max="100" value="1">
+
+    </form>
+  </center>
+</body>
+
+</html>
